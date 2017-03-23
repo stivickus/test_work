@@ -1,0 +1,28 @@
+include ../blocks/_all
+
+doctype html
+html
+	head
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/all.css')
+
+		block extra_css
+
+	body
+
+		.header-container.section
+			+b_header('Центр предоставления административных услуг')
+
+		.breadcrumbs-container.section
+			block breadcrumbs
+
+		.content-container.section.container
+			block content-title
+				+b.content-title.section
+					+e.text= 'Выберите услугу'
+
+			block content-body
+
+		block scripts
+			script(src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+			script(type="text/javascript" src="js/app.js")
